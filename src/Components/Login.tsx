@@ -6,7 +6,7 @@ import LogoImg from "../assets/logoBanner.png";
 function Login() {
   return (
     <div className="centerElement" style={{ height: "100vh" }}>
-      <Grid container sx={{ mt: 3, ml: 5, width: "100%" }}>
+      <Grid container sx={{ width: "100%" }}>
         <Grid xs={12} sm={6} className="centerElement">
           <Form />
         </Grid>

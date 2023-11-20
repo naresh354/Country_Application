@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchCountries, selectAllCountries, selectCountriesStatus, selectCountriesError } from '../feature/countries/countrySlice';
 import { Box, Grid, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import Footer from './Footer';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ const Home = () => {
       {status === 'loading' && <Typography sx={{ textAlign: "center", fontWeight:  "700", fontSize: "1.8rem" }}>Loading...</Typography>}
       {status === 'failed' && <p>Error: {error}</p>}
       {status === 'succeeded' && (
-          <Grid container spacing={2} gap={1} sx={{ mt: 2, mb: 2, justifyContent: 'center' }}>
+          <Grid container spacing={2} gap={1} sx={{ mt: 2, mb: 2, justifyContent: 'center', p: 5 }}>
           {countries.map((country: any) => (
             <Grid
               sx={{ border: '2px solid #3D3D3D', display: 'flex', p: 1 }}
@@ -43,6 +44,8 @@ const Home = () => {
           ))}
         </Grid>
       )}
+
+     { status === 'succeeded' &&  (  <Footer /> ) }
     </div>
   );
 };

@@ -7,7 +7,6 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import Divider from '@mui/material/Divider';
 import google from "../assets/google.png";
 import facebook from "../assets/facebook.png"
 import linkedin from "../assets/linkedin.png";
